@@ -28,7 +28,7 @@ $(document).ready(function(){
   //ANDRIY start
 
   var lastLoop = new Date;
-    function gameLoop() { 
+    function gameLoop() {
 
       var thisLoop = new Date;
       var fps = 1000 / (thisLoop - lastLoop);
@@ -70,7 +70,7 @@ $(document).ready(function(){
         return {"top": e.offsetTop, "left": e.offsetLeft, "width": e.offsetWidth, "height": e.offsetHeight };
 
       });
-      
+
       var count = arrLocation.length;
       var topTank = parseInt(tank2.offsetTop);
       var leftTank = parseInt(tank2.offsetLeft);
@@ -86,31 +86,31 @@ $(document).ready(function(){
       }
       console.log(parseInt(arrLocation["2"].top)+" :y : x: "+parseInt(arrLocation["2"].left));
      // console.log(arrLocation["0"].height);
- 
+
 
       var i = 0;
       while (i < count) {
 
         // var top = parseInt(arrLocation[i].top);
         // var topHeight = parseInt(arrLocation[i].heigth);
-        
+
         // var left = parseInt(arrLocation[i].left);
         // var topWidth = parseInt(arrLocation[i].width);
-        
+
         // if(topTank > top && topTank < topHeight) {
         //   console.log("top");
         // }
-        
+
         // if(leftTank > left && leftTank < topWidth) {
         //   console.log("left");
         // }
         //console.log(leftTank +" : "+ left +" && "+ leftTank +" : "+ topWidth);
         //console.log(left > leftTank && (left+topWidth) < leftTank);
         //console.log(left +" : "+ leftTank +" && "+ (topWidth) +" : "+ leftTank);
-        
+
         i++;
       };
-  
+
   //ANDRIY end
 
   //ROMAN start
@@ -118,6 +118,14 @@ $(document).ready(function(){
   //ROMAN end
 
   //NASTIA start
+  (function(){
+  var sound = new Audio('sound/loop2.mp3');
+  sound.volume = 0.9;
+  sound.addEventListener('ended', function() { // loop sound
+
+  }, false);
+  sound.play();
+  })();
 
   //NASTIA end
 
