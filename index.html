@@ -1,64 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Lonely Tank</title>
-  <!--Add CSS style-->
-  <link rel="stylesheet" href="css/style.css">
+  <title>Lonely-Tank | 2D-GAME</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <!--CONTAINER START-->
-  <div class="container">
-    <div id="fps"></div>
-    <!--HEADER START-->
-    <div class="header"><h3>Lonely-Tank | 2D-GAME</h3></div>
-    <!--HEADER END-->
-    <!--MENU-LIFE START-->
-    <div class="menu-life">
-      <div class="life_text"><p>Life:</p></div>
-      <div class="life" id="life_1"></div>
-      <div class="life" id="life_2"></div>
-      <div class="life" id="life_3"></div>
+  <div id="fps-block">fps</div>
+  <div id="game-window">
+    <div class="row1">
+      <div id="block1" class="block-big"></div>
+      <div id="block2" class="block-big"></div>
+      <div id="block3" class="block-middle"></div>
+      <div id="block4" class="block-steal-small"></div>
+      <div id="block5" class="block-middle"></div>
+      <div id="block6" class="block-big"></div>
+      <div id="block7" class="block-big"></div>
     </div>
-    <!--MENU-LIFE END-->
-    <!--WINDOW-GAME START-->
-    <div class="window_games">
-      <!-- tank START-->
-      <div class="tank">
-        <div class="tank-wheel tank-left-wheel"></div>
-        <div class="tank-wheel tank-right-wheel"></div>
+    <div class="row2">
+      <div id="block8" class="block-small"></div>
+      <div id="block9" class="block-small"></div>
+    </div>
+    <div class="row1Reverse">
+      <div id="block1Reverse" class="block-big"></div>
+      <div id="block2Reverse" class="block-big"></div>
+      <div id="block3Reverse" class="block-middle"></div>
+      <div id="block4Reverse" class="block-steal-small"></div>
+      <div id="block5Reverse" class="block-middle"></div>
+      <div id="block6Reverse" class="block-big"></div>
+      <div id="block7Reverse" class="block-big"></div>
+    </div>
+    <div class="row-garage">
+      <div id="block10" class="block-steal-line1"></div>
+      <div id="block11" class="block-steal-line2"></div>
+    </div>
+    <div id="tank">
+      <div class="tank-body">
         <div class="tank-armor">
-          <div class="tank-attic">
+          <div class="tank-top">
             <div class="tank-gun"></div>
           </div>
         </div>
       </div>
-      <!-- tank END-->
-      <!--map start-->
-      
-          <div class="road road-1"></div>
-          <div class="road road-2"></div>
-          <div class="road road-3"></div>
-          <div class="road road-4"></div>
-          <div class="road road-5"></div>
-          <div class="road road-6"></div>
-          <div class="road road-7"></div>
-          <div class="road road-8"></div>
-          
-      <!--map end-->
     </div>
-    <!--WINDOW-GAME END-->
-
-    <!--FOOTER START-->
-    <div class="created"><p>&copy; Created by PWNZ_peppers_Team</p></div>
-    <!--FOOTER START-->
   </div>
-  <!--CONTAINER END-->
 
-  <!--Add jQuery and Underscore-->
-  <script src="lib/jQuery/jquery-2.2.4.min.js"></script>
-  <script src="lib/Underscore/underscore-min.js"></script>
-  <!--Add JS file-->
-  <script src="js/common.js"></script>
+  <script src="libs\jquery-2.2.4.min.js"></script>
+  <script src="libs\underscore-min.js"></script>
+  <script src="js\app.js"></script>
 </body>
+
 </html>

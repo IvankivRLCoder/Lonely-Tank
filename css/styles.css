@@ -1,0 +1,176 @@
+body {
+  display: flex;
+  height: 100vh;
+  min-height: 653px;
+  margin: 0;
+  background: url('../img/back.jpg');
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Battle window*/
+
+div#game-window {
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+  height: 520px;
+  background-color: #000;
+  box-shadow: 0px 0px 157px 24px #000;
+}
+/*Tank*/
+
+div#tank {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 1px;
+  background: linear-gradient(to bottom, rgba(56, 56, 56, 1) 0%, rgba(89, 89, 89, 1) 10%, rgba(56, 56, 56, 1) 20%, rgba(89, 89, 89, 1) 30%, rgba(56, 56, 56, 1) 40%, rgba(89, 89, 89, 1) 50%, rgba(56, 56, 56, 1) 60%, rgba(89, 89, 89, 1) 70%, rgba(56, 56, 56, 1) 80%, rgba(89, 89, 89, 1) 90%, rgba(56, 56, 56, 1) 100%);
+}
+div.tank-body {
+  position: relative;
+  left: 6px;
+  width: 24px;
+  height: 36px;
+  background-color: #000;
+}
+div.tank-armor {
+  position: relative;
+  top: 5px;
+  left: 0;
+  width: 24px;
+  height: 28px;
+  background-color: #66BB6A;
+}
+div.tank-top {
+  position: relative;
+  top: 3px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: #3c6d3e;
+}
+div.tank-gun {
+  position: relative;
+  top: -10px;
+  left: 8px;
+  width: 5px;
+  height: 11px;
+  background-color: #3c6d3e;
+}
+.tankLeft {
+  transform: rotate(270deg);
+}
+.tankRight {
+  transform: rotate(90deg);
+}
+.tankTop {
+  transform: rotate(0deg);
+}
+.tankDown {
+  transform: rotate(180deg);
+}
+.tank-wheel-run {
+  animation: moveTank 180ms infinite;
+  animation-delay: 500ms;
+}
+
+/*--> Maps <--*/
+
+
+/*Map1*/
+
+div.row1, div.row2, div.row1Reverse, div.row-garage {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+div.row1 {
+  /**/
+}
+div.row2 {
+  top: -80px;
+  left: 160px;
+}
+div.row1Reverse {
+  top: 70px;
+}
+div.row-garage {
+  bottom: -120px;
+  left: 230px;
+  width: 60px;
+}
+
+/*Blocks*/
+
+div.block-big, div.block-middle, div.block-steal-small, div.block-small {
+  position: relative;
+}
+div.block-big {
+  top: 50px;
+  width: 40px;
+  height: 160px;
+  margin-left: 40px;
+  background: url('../img/wall-bg.png');
+}
+div.block-middle {
+  top: 50px;
+  width: 40px;
+  height: 100px;
+  margin-left: 40px;
+  background: url('../img/wall-bg.png');
+}
+div.block-steal-small {
+  top: 90px;
+  width: 40px;
+  height: 40px;
+  margin-right: -40px;
+  background: url('../img/steal-wall-bg.png');
+}
+div.block-small {
+  top: 150px;
+  width: 40px;
+  height: 40px;
+  margin-left: 40px;
+  background: url('../img/wall-bg.png');
+}
+
+/*Garage*/
+
+div.block-steal-line1 {
+  position: relative;
+  width: 10px;
+  height: 40px;
+  background: url('../img/steal-line-wall-bg.png');
+}
+div.block-steal-line2 {
+  position: relative;
+  left: 40px;
+  width: 10px;
+  height: 40px;
+  background: url('../img/steal-line-wall-bg.png');
+}
+
+/*FPS*/
+
+div#fps-block {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  color: #37474f;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+/*Animation tank*/
+
+@keyframes moveTank {
+  from {
+    background: linear-gradient(to bottom, rgba(56, 56, 56, 1) 0%, rgba(89, 89, 89, 1) 10%, rgba(56, 56, 56, 1) 20%, rgba(89, 89, 89, 1) 30%, rgba(56, 56, 56, 1) 40%, rgba(89, 89, 89, 1) 50%, rgba(56, 56, 56, 1) 60%, rgba(89, 89, 89, 1) 70%, rgba(56, 56, 56, 1) 80%, rgba(89, 89, 89, 1) 90%, rgba(56, 56, 56, 1) 100%);
+  }
+  to {
+    background: linear-gradient(to bottom, rgba(89, 89, 89, 1) 0%, rgba(56, 56, 56, 1) 10%, rgba(89, 89, 89, 1) 20%, rgba(56, 56, 56, 1) 30%, rgba(89, 89, 89, 1) 40%, rgba(56, 56, 56, 1) 50%, rgba(89, 89, 89, 1) 60%, rgba(56, 56, 56, 1) 70%, rgba(89, 89, 89, 1) 80%, rgba(56, 56, 56, 1) 90%, rgba(89, 89, 89, 1) 100%);
+  }
+}
